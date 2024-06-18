@@ -1,1 +1,65 @@
-# cryptp-app
+
+# Crypto App
+
+This App gives you an inclusive overview of crypto currencies.
+
+
+## Features
+
+- You can view all the listed crypto currency exchanges according to their ranks.
+- You can view all Crypto coins with their current prices.
+- Can view detailed analysis of every coin.
+- Provided a graph of price fluctuation in 24hrs, 7days, 30days, 180days, 365days.
+- You can also see price fluctuation of coin from the date it was created.
+- You can view prices in INR, USD, EUR
+- Responsive
+
+
+
+## Tech Stack
+
+- Chakra UI
+- React 
+- Packages: react-router-dom , Framer Motion, axios, react-icons, react-chartjs-2, chart.js
+
+
+## Lessons Learned
+
+- To fetch data from api and representation in our website 
+- Use of chakra UI for creation of beautiful UI
+- Learned how to make loader for website
+- Learned about React Router DOM
+- Learned about axios and chart.js library
+
+## API Reference
+
+#### End Point
+
+```http
+  GET  https://api.coingecko.com/api/v3/
+```
+
+#### Get Exchange Details
+
+```http
+  GET /api.coingecko.com/api/v3/exchanges
+```
+
+#### Get Coins Details
+
+```http
+  GET https://api.coingecko.com/api/v3/coins/markets
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `vs_currency`| `string` | **Required**. you can fecth coins according to currency |
+| `per_page`| `number`| Number of coins want to fecth per page|
+| `page`| `number` | Page number|
+
+
+#### Get Chart of a Coin
+
+```http
+  GET https://api.coingecko.com/api/v3/coins/{id}/market_chart
+```
